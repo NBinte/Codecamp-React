@@ -1,11 +1,28 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
 
-function Boop(){
+//stateless functional component or dump component
+//always returns jsx
 
-  return <h2> Boop Beep Boop Beep </h2>;
+//rules:
+//return single element
+//div/section/article or Fragment
 
+function Greetings() {
+  return (
+    <React.Fragment>
+      <div>
+        <h1>Hello World</h1>
+
+        <ul>
+          <li>
+            <a href="#">Hello World</a>
+          </li>
+        </ul>
+      </div>
+      <div></div>
+    </React.Fragment>
+  );
 }
 
-ReactDom.render(<Boop/>, document.getElementById("root"));
-
+ReactDom.render(<Greetings />, document.getElementById("root"));
