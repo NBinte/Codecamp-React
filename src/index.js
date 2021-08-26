@@ -7,22 +7,24 @@ import ReactDom from "react-dom";
 //rules:
 //return single element
 //div/section/article or Fragment
+//use camelcase for html attribute
+//className instead of class
+//close every element
+//formatting
 
 function Greetings() {
   return (
-    <React.Fragment>
-      <div>
-        <h1>Hello World</h1>
-
-        <ul>
-          <li>
-            <a href="#">Hello World</a>
-          </li>
-        </ul>
-      </div>
-      <div></div>
-    </React.Fragment>
+    <div>
+      <Person />
+      <Message />
+    </div>
   );
 }
+
+const Person = () => <h2>John Doe</h2>;
+
+const Message = () => {
+  return <p>This is my message</p>;
+};
 
 ReactDom.render(<Greetings />, document.getElementById("root"));
